@@ -15,7 +15,7 @@ public class Cheers {
                                 System.out.println("Give me an "+str.charAt(i)+": "+str.charAt(i)+"!");
                         }
                         else{
-                                System.out.println("Give me a "+str.charAt(i)+": "+str.charAt(i)+"!");
+                                System.out.println("Give me a  "+str.charAt(i)+": "+str.charAt(i)+"!");
                         }
                 }
                 System.out.println("What does that spell?");
