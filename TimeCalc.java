@@ -1,3 +1,5 @@
+import javax.imageio.event.IIOWriteWarningListener;
+
 public class TimeCalc {
     public static void main(String[] args) {
         int hours = Integer.parseInt("" + args[0].charAt(0) + args[0].charAt(1));
@@ -7,24 +9,21 @@ public class TimeCalc {
         int totalHours = totalMinutes/60;
         int newHours = totalHours%24;
         int newMinutes = (totalMinutes-(totalHours*60));
-        if (newHours == 0 && newMinutes != 0) {
-            System.out.println("00:"+newMinutes);
-        }
-        if (newHours != 0 && newMinutes == 0) {
-            System.out.println(totalHours+":00");
-        }
-        if (newHours == 0 && newMinutes == 0) {
-            System.out.println("00:00");
-        }
-        if (newHours>10 && newHours != 0 && newMinutes != 0) {
-            System.out.println("0"+newHours+":"+totalMinutes);
-        }
-        if (newMinutes>10 && newMinutes != 0 && newHours != 0) {
-            System.out.println(newHours+":0"+totalMinutes);
-        }
-        if (newMinutes <10 && newHours<10 && newMinutes != 0 && newHours != 0) {
-            System.out.println("0"+newHours+":0"+newMinutes);
+        if (newHours < 10 || newMinutes < 10) {
+                if (newMinutes<10 && newHours >=10 && newMinutes != 0) {
+                    System.out.println(newHours+":0"+newMinutes);
+                }
+                if (newHours<10 && newMinutes >=10 && newHours != 0) {
+                    System.out.println("0"+newHours+":"+newMinutes);
+                }
+                if (newHours == 0 && newMinutes == 0) {
+                    System.out.println("00:00");
+                }
+                if (newHours < 10 && newMinutes < 10) {
+                    System.out.println("0"+newHours+":0"+newMinutes);
+                }
+            }
+        System.out.println(newHours+":"+newMinutes);
         }
     }
-}
 
