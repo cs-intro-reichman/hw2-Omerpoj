@@ -23,7 +23,7 @@ public class Collatz {
 						counter++;
 					}
 				}
-				System.out.println("("+counter+")");
+				System.out.println(" ("+counter+")");
 			}
 			System.out.println("Every one of the first "+num+" hailstone sequences reached 1.");
 		}

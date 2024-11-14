@@ -3,7 +3,7 @@ public class Cheers {
         public static void main(String[] args) {
                 String str = args[0];
                 int num = Integer.parseInt(args[1]);
-                String anLetters = "AEFHIKMNORSX";
+                String anLetters = "AEFHIMNORSXaefhimnorpsx";
                 for(int i=0;i<str.length();i++){
                         boolean initial = false;
                         for(int j = 0;j<anLetters.length();j++){
