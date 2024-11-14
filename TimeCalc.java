@@ -25,7 +25,7 @@ public class TimeCalc {
                 if (newHours == 0 && newMinutes != 0 && newMinutes != 1) {
                     System.out.println("00:"+newMinutes);
                 }
-                if (newHours < 10 && newMinutes < 10 && newHours <= 1 && newMinutes <=1 && newHours != 0) {
+                if (newHours < 10 && newMinutes < 10 && newHours <= 1 && newMinutes !=0) {
                     System.out.println("0"+newHours+":0"+newMinutes);
                 }
             }
