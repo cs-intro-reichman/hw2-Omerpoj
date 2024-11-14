@@ -6,35 +6,24 @@ public class TimeCalc {
         int totalMinutes = ((hours*60)+minutes+addMinutes);
         int totalHours = totalMinutes/60;
         int newHours = totalHours%24;
-        System.out.println(newHours);
         int newMinutes = (totalMinutes-(totalHours*60));
-        if (newHours == 0 || newMinutes == 0) {
-            if (newHours<10) {
-                newHours = Integer.parseInt(""+0+newHours);
-            }
-            if (newMinutes<10) {
-                newHours = Integer.parseInt(""+0+newMinutes);
-            }
+        if (newHours == 0 && newMinutes != 0) {
+            System.out.println("00:"+newMinutes);
+        }
+        if (newHours != 0 && newMinutes == 0) {
+            System.out.println(totalHours+":00");
         }
         if (newHours == 0 && newMinutes == 0) {
             System.out.println("00:00");
         }
-        else{
-            if (newHours == 0) {
-                System.out.println("00:"+newMinutes);
-            }
-            if (newMinutes == 0) {
-                System.out.println(newMinutes+":00");
-            }
-            if (newHours == 0 || newMinutes == 0) {
-                if (newHours<10) {
-                    newHours = Integer.parseInt(""+0+newHours);
-                }
-                if (newMinutes<10) {
-                    newHours = Integer.parseInt(""+0+newMinutes);
-                }
-            }
-            System.out.println(newHours+":"+newMinutes);
+        if (newHours>10 && newHours != 0 && newMinutes != 0) {
+            System.out.println("0"+newHours+":"+totalMinutes);
+        }
+        if (newMinutes>10 && newMinutes != 0 && newHours != 0) {
+            System.out.println(newHours+":0"+totalMinutes);
+        }
+        if (newMinutes <10 && newHours<10 && newMinutes != 0 && newHours != 0) {
+            System.out.println("0"+newHours+":0"+newMinutes);
         }
     }
 }
