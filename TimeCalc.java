@@ -23,7 +23,9 @@ public class TimeCalc {
                     System.out.println("0"+newHours+":0"+newMinutes);
                 }
             }
-        System.out.println(newHours+":"+newMinutes);
+        else{
+            System.out.println(newHours+":"+newMinutes);
+        }
         }
     }
 
