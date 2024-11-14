@@ -10,14 +10,20 @@ public class TimeCalc {
         int newHours = totalHours%24;
         int newMinutes = (totalMinutes-(totalHours*60));
         if (newHours < 10 || newMinutes < 10) {
-                if (newMinutes<10 && newHours >=10 && newMinutes != 0) {
+                if (newMinutes < 10 && newHours >=10 && newMinutes != 0) {
                     System.out.println(newHours+":0"+newMinutes);
                 }
-                if (newHours<10 && newMinutes >=10 && newHours != 0) {
+                if (newHours < 10 && newMinutes >=10 && newHours != 0) {
                     System.out.println("0"+newHours+":"+newMinutes);
                 }
                 if (newHours == 0 && newMinutes == 0) {
                     System.out.println("00:00");
+                }
+                if (newHours != 0 && newMinutes == 0) {
+                    System.out.println(newHours+":00");
+                }
+                if (newHours == 0 && newMinutes != 0) {
+                    System.out.println("00:"+newMinutes);
                 }
                 if (newHours < 10 && newMinutes < 10 && newHours != 0 && newMinutes != 0) {
                     System.out.println("0"+newHours+":0"+newMinutes);
